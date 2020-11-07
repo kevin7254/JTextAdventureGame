@@ -13,6 +13,7 @@ public class Game {
 
         this.player = player;
         this.sc = new Scanner(System.in);
+
     }
 
 
@@ -21,5 +22,10 @@ public class Game {
     public void newGameInit(Player player) {
 
         player.setName(sc.nextLine());
+    }
+
+
+    public static void main(String[] args) {
+
     }
 }
