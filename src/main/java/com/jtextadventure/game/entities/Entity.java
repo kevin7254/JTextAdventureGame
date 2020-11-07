@@ -30,11 +30,18 @@ public class Entity {
     }
 
 
+    public boolean isAlive() {
+        return health > 0;
+    }
+
     public int getHealth() {
         return health;
     }
 
     public void setHealth(int health) {
+        if (health > healthMax) {
+            health = healthMax;
+        }
         this.health = health;
     }
 

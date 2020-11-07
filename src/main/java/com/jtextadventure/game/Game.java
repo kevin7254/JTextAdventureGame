@@ -1,5 +1,6 @@
 package com.jtextadventure.game;
 
+import com.jtextadventure.game.entities.Entity;
 import com.jtextadventure.game.entities.Player;
 
 import java.util.Scanner;
@@ -26,6 +27,9 @@ public class Game {
 
 
     public static void main(String[] args) {
+
+        new Game(new Player(),"Kevin");
+        new Entity();
 
     }
 }
