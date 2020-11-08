@@ -7,10 +7,10 @@ public class Entity {
     private String name;
     private int level;
     //Stats
-    private int intelligence;
-    private int dexterity;
-    private int armor;
-    private int strength;
+    private int intelligence; //affects things such as trading etc.
+    private int dexterity; // affects defense
+    private int armor; // affects defense
+    private int strength; // affects attack
     private int gold;
 
 
