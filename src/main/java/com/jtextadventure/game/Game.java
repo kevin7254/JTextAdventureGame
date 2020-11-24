@@ -9,15 +9,18 @@ public class Game {
 
     Player player;
     Scanner sc;
+    private static boolean running = true;
 
-    public Game(Player player, String playerType) {
+    public Game() {
 
-        this.player = player;
+        this.player = Player.getInstance();
         this.sc = new Scanner(System.in);
 
-        switch (playerType) {
+        switch (player.playerType()) {
             case "new":
                 newGameInit(player);
+                running = true;
+                player.getStats();
                 break;
 
             case "old":
@@ -31,11 +34,18 @@ public class Game {
     }
 
 
+    public void newGameInit(Player player) { // BARA om det är first time playing. TODO fixa till JSON sen
+        player.setName("Default");
+        player.setArmor(10);
+        player.setDexterity(10);
+        player.setHealth(100);
+        player.setIntelligence(10);
+        player.setLevel(1);
+        player.setStrength(10);
+    }
 
-
-    public void newGameInit(Player player) {
-
-        player.setName(sc.nextLine());
+    public static boolean isRunning() { //TODO: Maybe not static?
+        return running;
     }
 
 

@@ -12,14 +12,15 @@ public class Entity {
     private int armor; // affects defense
     private int strength; // affects attack
     private int gold;
-
+    private double damage = 30;
+    private double critChange = 0.0;
 
 
     public Entity() {
-        this(100,100,"Name",1,0);
+        this(100, 100, "Name", 1, 0);
     }
 
-    public Entity (int health, int healthMax, String name, int level, int gold) {
+    public Entity(int health, int healthMax, String name, int level, int gold) {
 
         this.health = health;
         this.healthMax = healthMax;
@@ -107,5 +108,21 @@ public class Entity {
 
     public void setGold(int gold) {
         this.gold = gold;
+    }
+
+    public double getDamage() {
+        return damage;
+    }
+
+    public void setDamage(double damage) {
+        this.damage = damage;
+    }
+
+    public double getCritChange() {
+        return critChange;
+    }
+
+    public void setCritChange(double critChange) {
+        this.critChange = critChange;
     }
 }
